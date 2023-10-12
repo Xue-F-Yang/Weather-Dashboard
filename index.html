@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External CSS links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-dark"> 
+        <h1 class="p-2 text-light text-center h1">Weather Forecast</h1>
+    </header>
+
+    <!-- Main Content -->
+    <div class="m-4 p-4">
+        <div class="col-md-12">
+            <div class="row">
+
+                <!-- Search Section -->
+                <div class="col-md-3">
+
+                    <!-- Search Form -->
+                    <h5>Search for a City:</h5>
+                    <form class="form-inline" id="search-form">
+                        <input type="search" class="form-control mb-3 ds-input" id="cityname" placeholder="Enter city name...">
+                        <button type="submit" class="btn btn-primary mb-3"><span class="oi oi-magnifying-glass"></span></button>
+                    </form>
+
+                    <!-- Search History-->
+                    <ul class="list-group" id="search-history">
+                    </ul>
+
+                </div>
+
+                <!-- Results Section -->
+                <div class="col-md-9">
+
+                    <!-- City Weather Data -->
+                    <div class="card mt-2">
+                        <div class="card-body">
+                            <div class="d-flex flex-row ">
+                                <h2 class="card-title align-self-center" id="main-city-name"></h2> 
+                            </div>
+                            <h6 class="card-subtitle text-muted" id="main-city-temp">Temperature: </h6>
+                            <h6 class="card-subtitle mt-3 text-muted" id="main-city-humid">Humidity: </h6>
+                            <h6 class="card-subtitle mt-3 text-muted" id="main-city-wind">Wind Speed: </h6>
+                            <h6 class="card-subtitle mt-3 text-muted" id="main-city-uv">UV Index: <span id="uv-box" class="px-2 py-1 mb-1 text-light rounded font-weight-normal"></span></h6>
+                        </div>  
+                    </div>
+                    
+                    <!-- 5-Day Forecast -->
+                    <div>
+                        <h2 class="card-title mt-3">5-Day Forecast:</h2>
+                        <div class="row justify-content-between" id="five-day">
+                            <!-- Filled by displayWeather() -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.3/dayjs.min.js"></script>
+    <script src="./assets/js/dashboard.js"></script>
+</body>
+</html>
